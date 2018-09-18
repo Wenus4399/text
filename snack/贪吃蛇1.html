@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    .total{
+        width: 100px;
+        height: 20px;
+        margin-left: 820px;
+        outline: none;
+        position: absolute;
+        z-index: 20;
+        text-align: center;
+    }
+    </style>
+    <script>
+        var num=0;
+        //创建对象
+        var map; //地图
+        var food; //食物
+        var snack; //蛇
+        var sum;  //分数
+        var timer; //计数器
+        //创建地图
+        function Map(){
+            //封装相关属性
+            this.width="800px";
+            this.height="400px";
+            this.color="silver";
+            this.position="absolute";
+            this._map=null;
+
+            //封装对象
+            this.show =function(){
+                if(this._map==null)
+                {   this._map = document.createElement("div");
+                    this._map.style.width=this.width;
+                    this._map.style.height=this.height;
+                    this._map.style.backgroundColor=this.color;
+                    this._map.style.position=this.position;
+                    document.getElementsByTagName("body")[0].appendChild(this._map);
+                }
+            }
+        }
+        function Food(){
+            //封装属性
+            this.width=20;
+            this.height=20;
+            this.color="yellow";
+            this.position="absolute";
+            //分装坐标
+            this.x;
+            this.y;
+
+            this._food=null;
+            this.show=function(){
+                if(this._food==null)
+                {
+                    this._food=document.createElement("div");
+                    this._food.style.width=this.width+"px";
+                    this._food.style.height=this.height+"px";
+                    this._food.style.position=this.position;
+                    this._food.style.backgroundColor=this.color;
+                    //给地图对象添加食物对象
+                    map._map.appendChild(this._food);
+                }
+                //食物随机坐标
+                this.x=Math.floor(Math.random() * 40 );
+                this.y=Math.floor(Math.random() * 20 ) ;
+                this._food.style.left=this.x * this.width + "px";
+                this._food.style.top =this.y * this.height + "px";
+            }
+        }
+        function Snack(){
+            this.width=20;
+            this.height=20;
+            this.position="absolute";
+            this.direct="right";
+            //创建蛇本身的属性
+            this.boy=[[3,2,"green",null],[2,2,"pink",null],[1,2,"pink",null]];
+            //判断方向
+            this.diretion=function(code){
+                switch (code)
+                {
+                    case 37: this.direct="left"; break;
+                    case 38: this.direct="up"; break;
+                    case 39: this.direct="right"; break;
+                    case 40: this.direct="down"; break;
+                }
+            }
+            //蛇移动
+            this.move =function(){
+                //将身体的第三个复制给第二个。 把当前这个复制给前一个；
+                var len=this.boy.length-1;
+                for(var i=len;i>0;i--)
+                {
+                    this.boy[i][0]=this.boy[i-1][0];
+                    this.boy[i][1]=this.boy[i-1][1];
+                }
+                //开始动
+                //只要蛇头动，身子就跟着动。所以一下都是对蛇头的操作
+                switch (this.direct)
+                {
+                    case "right":  this.boy[0][0]=this.boy[0][0]+1;break;
+                    case "up":  this.boy[0][1]=this.boy[0][1]-1;break;
+                    case "left":  this.boy[0][0]=this.boy[0][0]-1;break;
+                    case "down":  this.boy[0][1]=this.boy[0][1]+1;break;
+                }
+                var lena=this.boy.length;
+                for(var i=1;i<lena;i++)
+                {
+                    if(this.boy[0][0]==this.boy[i][0]&&this.boy[0][1]==this.boy[i][1])
+                    {  clearInterval(timer);
+                        alert("你吃到自己了！");
+                        return
+                    }
+                }
+
+                //吃到食物的话
+                if(this.boy[0][0]==food.x && this.boy[0][1]==food.y)
+                {   this.boy.push([food.x,food.y,"pink",null]);
+                    food.show();
+                     num++;
+                    sum.show();
+                }
+
+                //撞上墙了
+                if(this.boy[0][0]<0||this.boy[0][0]>=40||this.boy[0][1]<0||this.boy[0][1]>=20)
+                {
+                    clearInterval(timer);
+                    alert("你撞墙了！");
+                    return
+
+                }
+                //判断蛇不能撞自己    分数   死了之后继续开始    速度调节   或者是说  蛇右边出去左边进来
+
+                this.show();
+            }
+
+
+            //显示蛇
+            this.show=function(){
+
+                for(var i=0;i<this.boy.length;i++)
+                {
+                    if(this.boy[i][3]==null)
+                    {
+                        this.boy[i][3]=document.createElement("div");
+                        this.boy[i][3].style.width=this.width+"px";
+                        this.boy[i][3].style.height=this.height+"px";
+                        this.boy[i][3].style.position=this.position;
+                        this.boy[i][3].style.backgroundColor=this.boy[i][2];
+                        //把蛇放在地图上
+                        map._map.appendChild(this.boy[i][3]);
+                    }
+                    this.boy[i][3].style.left=this.boy[i][0]*this.width+"px";
+                    this.boy[i][3].style.top=this.boy[i][1]*this.width+"px";
+
+                }
+            }
+
+        }
+        function Sum(){
+            this.width=100;
+            this.height=20;
+            this.color="silver";
+            this.border="1px pink solid";
+            this.position="absolute";
+            this._sum=null;
+            this.show= function () {
+                if(this._sum==null)
+                {
+                    this._sum=document.createElement("div");
+                    this._sum.style.width=this.width+"px";
+                    this._sum.style.height=this.height+"px";
+                    this._sum.style.backgroundColor=this.color;
+                    this._sum.style.position=this.position;
+                    this._sum.style.left="820px";
+                    this._sum.style.border=this.border;
+                    this._sum.innerHTML=num;
+                    alert("num="+num);
+                    alert(" this._sum.innerHTML"+ this._sum.innerHTML);
+                    document.getElementsByTagName("body")[0].appendChild(this._sum);
+                }
+
+            }
+
+
+
+        }
+        window.onload=function(){
+            map=new Map();
+            map.show();
+
+            //食物
+            food=new Food();
+            food.show();
+            //蛇
+            snack=new Snack();
+
+            //添加计时器
+            timer=setInterval("snack.move()",200);
+            snack.show();
+            sum=new Sum();
+            //键盘敲击事件
+            document.onkeydown=function(){
+                var code=event.keyCode;
+                if(code==37&& snack.direct=="right")  //键盘按键向左，但是蛇的方向向右
+                {      snack.diretion(39);}       //蛇向右动
+                else if(code==40&& snack.direct=="up")    //键盘按键向下，但蛇的方向向上
+                {   snack.diretion(38);}          //蛇向上动
+                else if(code==38&& snack.direct=="down")  //键盘按键向上，但蛇的方向向下
+                {  snack.diretion(40);}            //蛇向下移动
+                else if(code==39&& snack.direct=="left") //键盘按键向右，但蛇的方向向左
+                { snack.diretion(37);}           //蛇方向向左
+                else {snack.diretion(code);}
+            }
+            //分数
+
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
