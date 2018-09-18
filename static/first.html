@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bacca.css">
+    <script src="js/jquery-3.0.0.js"></script>
+    <script src="js/bacca.js"></script>
+    <title></title>
+</head>
+<body>
+<div class="aleft">
+    <div class="pull-right">
+        <div class="alright" style="padding-top: 10px">
+            <span style="margin-left: 20px;float: left;font-size: x-large">购物车</span>
+            <span id="close" style="font-size: x-large;float: right;margin-right: 20px;margin-top: -5px">&times; </span>
+            <table class="table table-bordered text-center shop_table ">
+                <tr>
+                    <td>产品</td>
+                    <td>数量</td>
+                    <td>单价</td>
+                </tr>
+            </table>
+            <div><button class="btn btn-info totalprice " style="margin-left: 120px;width: 100px;height: 50px" onclick="totalprice()">总价</button></div>
+        </div>
+    </div>
+</div>
+<div class="sign ">
+    <div class="join text-center">
+        <span style="font-size: large;font-weight: bold;">登录</span>
+        <span id="close1" style="font-size: x-large;float: right;margin-right: 20px;margin-top: -5px">&times; </span>
+        <ul style="margin-top: 50px">
+            <li class="join_li"><input type="text" id="iphone" value="手机号/账号"></li>
+            <li class="join_li"><input type="password" id="passward" placeholder="密码"></li>
+            <li class="join_li" ><input id="join" style="border: 2px solid #e83f00 ;background-color: white" type="button" value="登录"></li>
+            <li class="join_li"><span style="float: left">忘记密码?</span></li>
+            <li class="join_li"><span style="float: right">注册账号</span></li>
+
+        </ul>
+
+    </div>
+</div>
+<div class="bg"></div>
+<div class="title">
+    <span id="title">田心王其</span>
+    <ul>
+        <li class="title_li  jump">首页</li>
+        <li class="title_li  jump">特色</li>
+        <li class="title_li  jump">产品</li>
+        <li class="title_li" id="shop">购物车<div id="all"></div></li>
+        <li class="title_li" id="sign">登录</li>
+    </ul>
+</div>
+<div class="first ">
+    <img id="hero02" src="img/hero02.png">
+    <div class="first1 text-center">
+        <p>手工制作的木制支架用于<br>
+            笔记本电脑和仪器</p>
+        <label>
+            Wenus设计<br>
+        </label>
+        <br>
+        <br>
+        <br>
+        <span id="more">
+         查看产品 <font  style="font-size: xx-large;color: white">&telrec;</font>
+        </span>
+    </div>
+    <div class="first2 ">
+        <img src="img/feature-1.png">
+        <div>
+            <span> 外出旅行</span>
+            <br><br>
+            <font>准备好了为轻便旅行设计的配件，他们必不可少。</font><br>
+            <br>
+            <font>易于组装，只有两个物件，你就可以设置。</font>
+        </div>
+    </div>
+</div>
+<div class="second">
+    <img src="img/feature-2.png">
+    <div>
+        <span> 为每个人需要</span>
+        <br><br>
+        <font>适用于笔记本电脑、合成器、开槽机和鼓机 。<br> Bacca是你的装备的完美伴侣。</font>
+    </div>
+</div>
+<div class="third">
+    <img src="img/feature-3.png">
+    <div>
+        <span> 持续摇滚</span>
+        <br><br>
+        <font>最后，你的笔记本电脑和仪器的安全是有保障的。</font>
+    </div>
+</div>
+<div class="fourth">
+    <div>
+        <ul>
+            <li><img src="img/1.png">
+                <span>设计用于通过电缆的打开</span>
+            </li>
+            <li><img src="img/1.2.png">
+                <span>防止计算机和仪器过热</span></li>
+            <li><img src="img/1.3.png">
+                <span>最符合人体工程学的位置</span></li>
+            <li><img src="img/1.4.png">
+                <span>非常轻，非常适合旅行</span></li>
+        </ul>
+    </div>
+    <label>多层压板，12.5毫米<br>路由古木材</label>
+</div>
+<div class="fifth">
+    <span>产品大全&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <div class="fifth1">
+        <div>
+            <div class="fifth2"><img class="fifth_img" src="img/live.png"></div>
+            <div class="name">生活 &nbsp;&centerdot;&nbsp;&clubsuit;&nbsp;65</div>
+            <span class="more" style="float: left;margin-left: 10px">查看更多 <font>&infintie;</font></span>
+            <span style="margin-left: 25px;position: absolute;z-index: 100000!important;"class="shop">加入购物车 <font>&dfisht;</font></span>
+        </div>
+    </div>
+    <div class="fifth1" style="float: right;margin-right: 220px">
+        <div>
+            <div class="fifth2"><img class="fifth_img" src="img/studio.png"></div>
+            <div class="name">学习 &nbsp;&centerdot;&nbsp;&clubsuit;&nbsp;55</div>
+            <span class="more"  style="float: left;margin-left: 10px">查看更多 <font>&infintie;</font></span>
+            <span style="position: absolute;z-index: 100000!important;margin-left: 25px" class="shop">加入购物车 <font>&dfisht;</font></span>
+        </div>
+    </div>
+    <div class="fifth1" style="margin-left: 480px;margin-top: 100px">
+        <div>
+            <div class="fifth2"><img class="fifth_img" src="img/desktop.png"></div>
+            <div class="name">桌面 &nbsp;&centerdot;&nbsp;&clubsuit;&nbsp;50</div>
+            <span class="more"  style="float: left;margin-left: 10px">查看更多 <font>&infintie;</font></span>
+            <span style="margin-left: 25px;position: absolute;z-index: 100000!important;" class="shop"  >加入购物车 <font>&dfisht;</font></span>
+        </div>
+    </div>
+</div>
+<div class="sixth">
+    <span style="margin-left: 400px">向全世界展示你的网络</span>
+    <p style="margin-left: 550px">&spadesuit; @Wenus</p>
+    <div class="sixth_div">
+        <ul class="sixth_ul">
+            <li class="sixth_li"><span class="sixth_span"><font style="font-size:large;color: darkred">&spadesuit;</font>点赞</span></li>
+            <li class="sixth_li"><span class="sixth_span"><font style="font-size:large;color: darkred">&spadesuit;</font>点赞</span></li>
+            <li class="sixth_li"><span class="sixth_span"><font style="font-size:large;color: darkred">&spadesuit;</font>点赞</span></li>
+            <li class="sixth_li"><span class="sixth_span"><font style="font-size:large;color: darkred">&spadesuit;</font>点赞</span></li>
+            <li class="sixth_li"><span class="sixth_span"><font style="font-size:large;color: darkred">&spadesuit;</font>点赞</span></li>
+            <li class="sixth_li"><span class="sixth_span"><font style="font-size:large;color: darkred">&spadesuit;</font>点赞</span></li>
+            <li class="sixth_li"><span class="sixth_span"><font style="font-size:large;color: darkred">&spadesuit;</font>点赞</span></li>
+            <li class="sixth_li"><span class="sixth_span"><font style="font-size:large;color: darkred">&spadesuit;</font>点赞</span></li>
+            <li class="sixth_li"><span class="sixth_span"><font style="font-size:large;color: darkred">&spadesuit;</font>点赞</span></li>
+
+        </ul>
+    </div>
+
+</div>
+<div class="end" style="padding-top: 20px">
+    <div class="pull-left">
+        <span style="margin-left: 50px;">联系我们:</span>
+        <div action="new.html" method="post" style="margin-top: 10px">
+            <input type="text" name="name" id="name" value="姓名">
+            <input type="text" name="emal" id="emal" value="邮件">
+            <br>
+            <textarea id="text" name="text">信息</textarea>
+            <br>
+            <input type="submit" class="btn btn-info" id="submit"  style="margin-left: 400px">
+        </div>
+    </div>
+    <div class="pull-left design " >
+        @Designed by Wenus  2017年5月22日
+    </div>
+</div>
+
+</body>
+</html>
