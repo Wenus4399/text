@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.js"></script>
+    <script src="../js/shop.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/food.css">
+
+    <style>
+        .food_menu{
+            position: absolute;
+            z-index: 3;
+            margin-top: 380px;
+            margin-left: 600px;
+        }
+
+        .li_k{
+            margin-top: 100px;
+            list-style: none;
+            float: left;
+            width: 35px;
+            text-align: center;
+            line-height: 35px;
+            height: 35px;
+            border: 1px solid silver;
+            font-size: x-large;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="xiangqing">
+    <div class="close" ng-click="click()">X</div>
+    <div>
+        <div class="xq_left"><img src="../img/{{one.img}}"></div>
+        <div class="xq_right">
+            <div class="right_li">名称：{{one.name}}</div><br>
+            <div class="right_li">价格：{{one.detailinfo.price}}</div><br>
+            <div class="right_li">品牌：{{one.brand}}</div><br>
+            <div class="right_li">产地：{{one.detailinfo.address}}</div><br>
+            <div class="right_li">运费：{{one.detailinfo.post}}</div><br>
+            <div class="right_li">配送时间：{{one.detailinfo.time}}</div>
+        </div>
+    </div>
+</div>
+<div>
+    <ul class="food_ul">
+        <li class="food_li" ng-repeat="data in perstastic">
+            <div class="food_div"><img src="../img/{{data.img}}"></div>
+            <div><span class="span_left">{{data.name}}</span>
+                <span class="span_right" style="margin-left: 20px">￥{{data.detailinfo.price}}</span>
+            </div>
+            <div class="more">
+                <span class="more_left" ng-click="juti($index)">查看详情</span>
+                <span class="more_right"  ng-click="buy(data)">加入购物车</span>
+            </div>
+        </li>
+
+    </ul>
+</div>
+<br>
+<div class="food_menu">
+    <ul>
+        <li class="li_k" ng-repeat="n in pages" ng-click="jump($index)">{{n}}</li>
+    </ul>
+</div>
+</body>
+</html>

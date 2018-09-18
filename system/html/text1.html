@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app >
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/angular.min.js"></script>
+</head>
+<body>
+<!--相加-->
+<div>请输入第一个数：<input type="text" ng-model="num1" ></div>
+<br>
+<div>请输入第二个数：<input type="text" ng-model="num2"></div>
+<br>
+<div>输出结果：<input type="text" value="{{num1+''+num2}}"></div>
+
+<!--循环
+&lt;!&ndash;1.数组&ndash;&gt;
+<div ng-init="name=['张三','李四','王五']">
+    <ul>
+        <li  ng-repeat="x in name">{{x}}</li>
+    </ul>
+</div>
+&lt;!&ndash;2.JSON数据&ndash;&gt;
+<div ng-init="Name=[{name:'1',city:'2',age:'3'},{name:'4',city:'5',age:'6'}]">
+    <ul>
+        <li ng-repeat="i in Name"> {{i.name+""+i.city+""+i.age}}</li>
+    </ul>
+</div>
+&lt;!&ndash;3.数组&ndash;&gt;
+<div ng-init="point=[1,2,3,4,5]">
+    <div>{{point[1]}}</div>
+</div>-->
+控制器
+<div ng-controller="person">
+    <input type="text" ng-model="person.firstname">
+    <input type="text" ng-model="person.secondname">
+    <h1>{{person.method()}}</h1>
+</div>
+<div ng-controller="add">
+    <input type="text" ng-model="first">
+    <input type="text" ng-model="second">
+    <h1>{{allnum}}</h1>
+    <h1>{{add.method}}</h1>
+</div>
+<script>
+    function person($scope){
+        $scope.person={
+            firstname:"张",
+            secondname:"三",
+            method:function(){
+                  var x;
+                  x=$scope.person;
+                  return x.firstname+""+ x.secondname;
+            }
+        }
+    }
+    function add($scope){
+        $scope.total={
+            first:"1",
+            second:"2",
+            method:function(){
+                allnum =parseInt($scope.total.first)+parseInt($scope.total.second);
+                return allnum;
+            }
+        }
+    }
+</script>
+</body>
+</html>

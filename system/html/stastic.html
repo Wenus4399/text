@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link  rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+   .stastic_li{
+       list-style: none;
+       float: left;
+       width: 35px;
+       text-align: center;
+       line-height: 35px;
+       height: 35px;
+       border: 1px solid silver;
+       font-size: x-large;
+       margin-left: 20px;
+   }
+    </style>
+</head>
+<body>
+<table class="table table-bordered text-center">
+    <tr style="color: white">
+        <td >序号</td>
+        <td>类型</td>
+        <td>名称</td>
+        <td>商标</td>
+        <td>价钱</td>
+        <td>邮费</td>
+        <td>产地</td>
+        <td>运输时间</td>
+    </tr>
+    <tr ng-repeat="data in perdata1">
+        <td style="height: 30px;text-align: center;line-height: 30px">{{data.id}}</td>
+        <td style="height: 30px;text-align: center;line-height: 30px">{{data.text}}</td>
+        <td style="height: 30px;text-align: center;line-height: 30px">{{data.name}}</td>
+        <td style="height: 30px;text-align: center;line-height: 30px">{{data.brand}}</td>
+        <td style="height: 30px;text-align: center;line-height: 30px">{{data.detailinfo.price | currency}}</td>
+        <td style="height: 30px;text-align: center;line-height: 30px">{{data.detailinfo.post}}</td>
+        <td style="height: 30px;text-align: center;line-height: 30px">{{data.detailinfo.address}}</td>
+        <td style="height: 30px;text-align: center;line-height: 30px">{{data.detailinfo.time}}</td>
+    </tr>
+</table>
+<div>
+    <ul style="margin-left: 550px">
+        <li class="stastic_li" ng-click="jump($index)" ng-repeat="i in arrayn1">{{i}}</li>
+    </ul>
+</div>
+</body>
+</html>

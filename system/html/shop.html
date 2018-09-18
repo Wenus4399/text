@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/good.css">
+</head>
+<body>
+<table class="table table-bordered text-center font ">
+    <tr>
+        <td>ID</td>
+        <td>名称</td>
+        <td>单价</td>
+        <td>数量</td>
+        <td>小计</td>
+        <td>操作</td>
+    </tr>
+    <tr ng-repeat="good in shopgood">
+        <td>{{good.id}}</td>
+        <td>{{good.name}}</td>
+        <td>{{good.detailinfo.price}}</td>
+        <td>
+            <button class="btn btn-danger" ng-click="num('-',$index)">-</button>
+            {{good.num}}
+            <button class="btn btn-info" ng-click="num('+',$index)">+</button>
+        </td>
+        <td>{{good.detailinfo.price*good.num |currency}}</td>
+        <td><button class="btn btn-warning" ng-click="ceil($index)">删除</button></td>
+    </tr>
+
+    <tr>
+        <td colspan="7">总计：{{totalprice() |currency}}</td>
+    </tr>
+</table>
+</body>
+</html>

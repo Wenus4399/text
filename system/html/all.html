@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.js"></script>
+    <script src="../js/all.js"></script>
+    <link rel="stylesheet" href="../css/all.css">
+    <style>
+    </style>
+</head>
+<body>
+<ul class="img_ul">
+    <li class="img_li"><img src="../img/first/l1.png"></li>
+    <li class="img_li"><img src="../img/first/l2.jpg"></li>
+    <li class="img_li"><img src="../img/first/l3.jpg"></li>
+    <li class="img_li"><img src="../img/first/l4.jpg"></li>
+    <li class="img_li"><img src="../img/first/l5.jpg"></li>
+    <li class="img_li"><img src="../img/first/l6.jpg"></li>
+    <li class="img_li"><img src="../img/first/l7.jpg"></li>
+    <li class="img_li"><img src="../img/first/l9.jpg"></li>
+    <li class="img_li"><img src="../img/first/l10.jpg"></li>
+    <li class="img_li"><img src="../img/first/l11.jpg"></li>
+</ul>
+
+<script>
+    $(function(){
+        var index=[1,2,3,4,5,6,7,8,9,10];
+
+        for(var i=1;i<index.length;i++)
+        {
+            $(".img_li:nth-child("+i+")").css("z-index",index[index.length-i])
+        }
+        //建立定时器
+        var num=1;
+        var timer=setInterval(function () {
+
+            $(".img_li:nth-child(" + num + ")").fadeTo("slow",0.001);
+            num++;
+            $(".img_li:nth-child(" + num + ")").fadeTo("slow",0.99);
+            if(num==10)
+            {num=0}
+
+        },2000);
+    });
+
+</script>
+
+</body>
+</html>

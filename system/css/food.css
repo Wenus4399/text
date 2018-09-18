@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.food_li{
+    margin-top: 100px;
+    width: 19.8%;
+    height: 300px;
+    border: 1px orange solid;
+    list-style: none;
+    float: left;
+    border-radius: 10px;
+}
+.food_div{
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 85%;
+    height: 85%;
+    border: 1px black dashed;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.food_div img{
+    width: 100%;
+    height: 100%;
+}
+.span_left{
+    margin-top: 2px;
+    margin-left: 20px;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+    width: 130px;
+    height: 30px;
+    border: 1px solid silver;
+    font-size: large;
+    color: #122b40;
+}
+.span_right{
+    float: right;
+    margin-right: 20px;
+    font-size: x-large;
+    color: #FF4400;
+}
+.food_ul{
+    margin-left: 20px;
+}
+.food_li:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.more{
+    margin-top: 20px;
+}
+.more_left{
+    margin-top: 12px;
+    margin-left: 5px;
+    text-align: center;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    border: 1px silver solid;
+    background-color: #ffae88;
+    border-radius: 20px;
+    float: left;
+}
+.more_right{
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    border: 1px red solid;
+    background-color: #FF4400;
+    color: white;
+    line-height: 30px;
+    float: right;
+    margin-right: 8px;
+}
+.xiangqing{
+    display: none;
+    margin-left: 380px;
+    margin-top: 50px;
+    position: fixed;
+    z-index: 10;
+    width:530px;
+    height: 330px;
+    border-radius: 20px;
+    border: 1px solid #FF4400;
+    background-color: #ffd6c1;
+}
+.xq_left{
+    margin-left: 40px;
+    margin-top: 40px;
+    width: 250px;
+    height: 250px;
+    border: 1px dashed #FF4400;
+    border-radius: 20px;
+    overflow: hidden;
+    float: left;
+}
+.xq_left img{
+    width: 100%;
+    height: 100%;
+}
+.right_li{
+    margin-top: 10px;
+    font-size: 1em;
+    font-weight: bold;
+
+}
+.xq_right{
+    float: right;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+.close{
+    margin-top: 5px;
+    margin-right: 8px;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 20px;
+}

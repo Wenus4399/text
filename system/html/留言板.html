@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html ng-app ng-controller="control">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/jquery-3.0.0.js"></script>
+    <style>
+        .bg{
+            padding-top: 50px;
+            width: 100%;
+            height: 650px;
+            background-image:url("../img/2.jpg") ;
+            background-size: 100%;
+            padding-bottom: 50px;
+
+        }
+        input{
+            width: 98%;
+        }
+        textarea{
+            width: 98%;
+            height: 100px;
+        }
+        .form{
+            display: none;
+            position: fixed;
+            z-index: 10;
+            width: 60%;
+            border: 3px solid silver;
+            margin-left: 200px;
+            padding: 10px;
+            background-image: url("../img/2.jpg");
+
+        }
+        .liuyanban{
+            margin-left: 200px;
+            width: 60%;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .li_list{
+            text-align: center;
+            list-style: none;
+            float: left ;
+            border: 1px silver solid;
+            width: 35px;
+            height: 35px;
+            margin-left: 20px;
+            font-size: x-large;
+        }
+        .li_list:hover{
+            background-color: greenyellow;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg" >
+    <form class="form">
+        <label for="title">标题</label>
+        <br>
+        <input type="text" name="title" ng-model="stitle" >
+        <br>
+        <label form="content">内容</label>
+        <br>
+        <textarea name="context" ng-model="scontent"></textarea>
+        <button class="btn btn-info submit " style="margin-left: 500px" ng-click="updata(stitle,scontent)">提交信息</button>
+
+    </form>
+    <div class="liuyanban" ng-repeat="data in perdata">
+       <span>标题： {{data.title}}</span>
+        <br><br>
+       <span>内容： {{data.content}}</span>
+    </div>
+    <ul style="margin-left: 250px;margin-top: 40px">
+        <li class="li_list" ng-repeat="page in pagearray" ng-click="jump($index)">{{page}}</li>
+    </ul>
+    <button class="btn btn-danger addmore " style="margin-left: 100px">添加更多</button>
+    <br>
+
+
+</div>
+<script>
+    function  control($http,$scope){
+       //获取数据
+        //每页有5条数据
+        $scope.num=5;
+        $http.post("../data.txt").success(function(data){
+            //这是全部数据
+            $scope.message=data;
+            //这是每页数据
+            $scope.perdata=$scope.message.slice(0,$scope.num);
+            //总页数
+            $scope.totalpage=Math.ceil($scope.message.length/$scope.num);
+            //建立一个数组，保存页码
+            $scope.pagearray=[];
+            for (var i = 0; i < $scope.totalpage; i++) {
+                $scope.pagearray[i] = i + 1;
+            }
+            //点击每一页进行跳转    跳转这里出问题了，直接用函数用不了~
+            $scope.jump = function (index) {
+                $scope.page=index;
+                showpage(index);
+            };
+            function showpage(index){
+                $scope.perdata=$scope.message.slice(index*$scope.num,(index+1)*$scope.num);
+            }
+        }).error(function(){
+            alert("404");
+        });
+        //定义一个新的字节
+        $scope.newdata={
+            stitle:"",
+            scontent:"",
+        };
+        //点击提交按钮
+        $scope.updata=function(title,content){
+            $scope.message.push({
+                title:title,
+                content:content,
+            });
+            $scope.totalpage=Math.ceil($scope.message.length/$scope.num);
+            $scope.pagearray=[];
+            for (var i = 0; i < $scope.totalpage; i++) {
+                $scope.pagearray[i] = i + 1;
+            }
+
+        }
+
+    }
+    $(function(){
+      $(".addmore").click(function(){
+            $(".form").css("display","block");
+      });
+        $(".submit").click(function(){
+            $(".form").css("display","none");
+        })
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        .div_li{
+            list-style: none;
+            margin-top: 25px;
+            font-size: large;
+            font-weight: bold;
+        }
+        .li2{
+            list-style: none;
+            margin-top: 20px;
+            font-size: large;
+        }
+
+        .search{
+         float: right;margin-top: 20px;margin-right: 40px;width: 80px;
+        }
+    </style>
+</head>
+<body>
+<button ng-click="h()">哈哈</button>
+<div class="row container" style="margin-left: 80px">
+    <div class="col-lg-4 col-sm-4 col-md-4 col-xs-4" >
+        <ul>
+            <li class="div_li" >请输入检索信息:</li>
+            <li class="div_li">序号：<input type="text" ng-model="search_id"></li>
+            <li class="div_li">名称：<input type="text" ng-model="search_name"></li>
+            <li class="div_li">品牌：<input type="text" ng-model="search_brand"></li>
+            <li class="div_li">价钱：<input type="text" style="width: 110px" ng-model="search_min">~~<input style="width: 110px" type="text" ng-model="search-max"></li>
+            <li style="list-style: none;"><button ng-click="sa()"  class="btn btn-info search "  >检索</button></li>
+        </ul>
+    </div>
+    <div class="col-lg-8 col-sm-8 col-md-8 col-xs-8" style="border-left: 3px orangered solid;">
+        <ul>
+            <li class="li2">ID：<input  style="width: 80px;margin-left: 15px" type="text"></li>
+            <li class="li2">type：<input style="width: 80px"  type="text"></li>
+            <li class="li2">text：<input  style="width: 80px;margin-left: 6px" type="text"></li>
+            <li class="li2">名称：<input type="text"></li>
+            <li class="li2">品牌：<input type="text"></li>
+            <li class="li2">图片：<input type="text"></li>
+            <li class="li2">地区：<input type="text"></li>
+            <li class="li2">价钱：<input type="text"></li>
+            <li class="li2">邮费：<input type="text"></li>
+            <li class="li2">时间：<input type="text"></li>
+            <li style="list-style: none;margin-left: 300px;float: left;margin-top: -35px"><button ng-click="f()" style="width: 100px" class="btn btn-warning" ng-click="correct()">确认修改</button></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

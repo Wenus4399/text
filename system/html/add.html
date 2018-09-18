@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        .all {
+            margin-top: 10px;
+            margin-left: 250px;
+            width: 800px;
+            height: 330px;
+            border: 2px orangered double;
+            border-radius: 20px;
+        }
+        .tab li{
+            font-size: large;
+            line-height: 30px;
+            font-weight: bold;
+            margin-left: 20px;
+            list-style: none;
+            width: 300px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div style="font-size: x-large;margin-top: 50px;margin-left: 260px;font-weight: bold" >请输入要添加的信息：</div>
+    <div class="all">
+
+     <table class="tab"  >
+         <tr>
+             <td>
+                     <ul>
+                         <li>id：<input style="margin-left: 10px" type="text"  disabled ng-model="addid"></li>
+                         <li>type:<select style="width: 240px;height:35px;margin-left: 2px" ng-model="addtype" ng-click="jump(addtype)"  >
+                             <option>book</option>
+                             <option>cloth</option>
+                             <option>elect</option>
+                             <option>food</option>
+                         </select></li>
+                         <li>text:<input type="text" style="width: 240px;height:35px;margin-left: 6px" ng-model="addtext" disabled>
+                         </li>
+                         <li>名字:<input type="text" ng-model="addname"></li>
+                         <li>品牌:<input type="text" ng-model="addbrand"></li>
+                     </ul>
+             </td>
+             <td>
+                     <ul>
+                         <li>图片:<input type="text" ng-model="addimg"></li>
+                         <li>地点:<input type="text" ng-model="addaddress"></li>
+                         <li>价钱:<input type="text" ng-model="addprice"></li>
+                         <li>时间:<input type="text" ng-model="addtime"></li>
+                         <li>包邮:<input type="text" ng-model="addpost"></li>
+                     </ul>
+             </td>
+         </tr>
+     </table>
+    </div>
+    <div style="margin-left: 835px;margin-top: 20px">
+        <button class="btn btn-warning" style="width: 120px" ng-click="submit()">提交信息</button>
+    </div>
+</div>
+
+</body>
+</html>

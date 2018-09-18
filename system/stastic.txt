@@ -1,0 +1,448 @@
+[
+{
+"id":"1",
+"type":"food",
+"text":"食物",
+"name":"251g夏威夷果",
+"brand":"三只松鼠",
+"img":"3.png",
+"num":"1",
+"detailinfo":{
+   "time":"2-4天",
+   "address":"A市B区C场",
+   "price":"37.8",
+   "post":"包邮"
+}
+}
+,
+{
+"id":"2",
+"type":"food",
+"text":"食物",
+"name":"210g猪脯肉",
+"brand":"三只松鼠",
+"img":"7.png",
+"num":"1",
+"detailinfo":{
+   "time":"4-7天",
+   "address":"F市B区C场",
+   "price":"17.9",
+   "post":"10元邮费"
+}
+}
+,
+{
+"id":"3",
+"type":"food",
+"text":"食物",
+"name":"210x2碧根果",
+"brand":"三只松鼠",
+"img":"8.png",
+"num":"1",
+"detailinfo":{
+   "time":"1-4天",
+   "address":"C市C区A场",
+   "price":"39.9",
+   "post":"5元包邮"
+}
+}
+,
+{
+"id":"4",
+"type":"food",
+"text":"食物",
+"name":"牛肉粒110g",
+"brand":"三只松鼠",
+"img":"9.png",
+"num":"1",
+"detailinfo":{
+   "time":"1-4天",
+   "address":"F市D区A场",
+   "price":"18.9",
+   "post":"包邮"
+}
+}
+,
+{
+"id":"5",
+"type":"food",
+"text":"食物",
+"name":"150g爆米花",
+"brand":"三只松鼠",
+"img":"10.png",
+"num":"1",
+"detailinfo":{
+   "time":"1-4天",
+   "address":"C市A区F场",
+   "price":"12.9",
+   "post":"包邮"
+}
+}
+,
+{
+"id":"6",
+"type":"food",
+"text":"食物",
+"name":"120g孜香牛肚",
+"brand":"三只松鼠",
+"img":"11.png",
+"num":"1",
+"detailinfo":{
+   "time":"2-3天",
+   "address":"A市A区C场",
+   "price":"19.9",
+   "post":"包邮"
+}
+}
+,
+{
+"id":"7",
+"type":"elect",
+"text":"电器",
+"name":"华为荣耀9",
+"brand":"华为",
+"img":"4.png",
+"num":"1",
+"detailinfo":{
+   "time":"4-7天",
+   "address":"A市B区C场",
+   "price":"2299",
+   "post":"包邮"
+}
+}
+,
+ {
+ "id":"8",
+ "type":"elect",
+ "text":"电器",
+ "name":"荣耀畅玩6X",
+ "brand":"华为",
+ "img":"12.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"4-7天",
+    "address":"A市B区C场",
+    "price":"1147",
+    "post":"包邮"
+ }
+ }
+ ,
+ {
+ "id":"9",
+ "type":"elect",
+ "text":"电器",
+ "name":"努比亚Z17",
+ "brand":"努比亚",
+ "img":"13.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"4-7天",
+    "address":"A市B区C场",
+    "price":"1699",
+    "post":"包邮"
+ }
+ }
+ ,
+ {
+ "id":"10",
+ "type":"elect",
+ "text":"电器",
+ "name":"OPPOr11",
+ "brand":"OPPO",
+ "img":"14.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"4-7天",
+    "address":"A市B区C场",
+    "price":"2967",
+    "post":"包邮"
+ }
+ }
+ ,
+ {
+ "id":"11",
+ "type":"elect",
+ "text":"电器",
+ "name":"OPPOr9s",
+ "brand":"OPPO",
+ "img":"15.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"4-7天",
+    "address":"A市B区C场",
+    "price":"2533",
+    "post":"包邮"
+ }
+ }
+ ,
+ {
+ "id":"12",
+ "type":"elect",
+ "text":"电器",
+ "name":"小米6",
+ "brand":"小米",
+ "img":"16.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"4-7天",
+    "address":"A市B区C场",
+    "price":"2542",
+    "post":"包邮"
+ }
+ }
+ ,
+{
+ "id":"13",
+ "type":"cloth",
+ "text":"衣服",
+ "name":"连衣裙",
+ "brand":"三福",
+ "img":"5.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"4-7天",
+    "address":"A市B区C场",
+    "price":"229",
+    "post":"包邮"
+}
+}
+ ,
+{
+ "id":"14",
+ "type":"cloth",
+ "text":"衣服",
+ "name":"黑色T恤",
+ "brand":"韩都衣舍",
+ "img":"17.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"4-7天",
+    "address":"A市B区C场",
+    "price":"58",
+    "post":"包邮"
+}
+}
+ ,
+{
+ "id":"15",
+ "type":"cloth",
+ "text":"衣服",
+ "name":"水洗毛边牛仔裤",
+ "brand":"韩衣都舍",
+ "img":"18.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"4-7天",
+    "address":"A市B区C场",
+    "price":"168",
+    "post":"包邮"
+}
+}
+ ,
+{
+ "id":"16",
+ "type":"cloth",
+ "text":"衣服",
+ "name":"印花显瘦T恤",
+ "brand":"韩都衣舍",
+ "img":"19.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"4-7天",
+    "address":"A市B区C场",
+    "price":"58",
+    "post":"包邮"
+}
+}
+ ,
+{
+ "id":"17",
+ "type":"cloth",
+ "text":"衣服",
+ "name":"高腰牛仔裤",
+ "brand":"韩衣都舍",
+ "img":"20.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"4-7天",
+    "address":"A市B区C场",
+    "price":"49.9",
+    "post":"包邮"
+}
+}
+,
+{
+ "id":"18",
+ "type":"book",
+ "text":"书本",
+ "name":"红楼梦",
+ "brand":"曹雪芹",
+ "img":"6.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"2-3天",
+    "address":"A市B区C场",
+    "price":"29",
+    "post":"包邮"
+}
+}
+,
+{
+ "id":"19",
+ "type":"book",
+ "text":"书本",
+ "name":"三国演义",
+ "brand":"人民文学出版社",
+ "img":"21.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"2-3天",
+    "address":"A市B区C场",
+    "price":"28.5",
+    "post":"包邮"
+}
+}
+,
+{
+ "id":"20",
+ "type":"book",
+ "text":"书本",
+ "name":"水浒传",
+ "brand":"人民文学出版社",
+ "img":"22.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"2-3天",
+    "address":"A市B区C场",
+    "price":"21.9",
+    "post":"包邮"
+}
+}
+,
+{
+ "id":"21",
+ "type":"book",
+ "text":"书本",
+ "name":"西游记",
+ "brand":"人民文学出版社",
+ "img":"23.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"2-3天",
+    "address":"A市B区C场",
+    "price":"32.8",
+    "post":"包邮"
+}
+}
+,
+{
+ "id":"22",
+ "type":"book",
+ "text":"书本",
+ "name":"小王子",
+ "brand":"人民文学出版社",
+ "img":"24.png",
+ "detailinfo":{
+    "time":"2-3天",
+    "address":"A市B区C场",
+    "price":"22",
+    "post":"包邮"
+}
+}
+,
+{
+ "id":"23",
+ "type":"book",
+ "text":"书本",
+ "name":"摆渡人",
+ "brand":"人民文学出版社",
+ "img":"25.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"2-3天",
+    "address":"A市B区C场",
+    "price":"18",
+    "post":"包邮"
+}
+}
+,
+{
+ "id":"24",
+ "type":"book",
+ "text":"书本",
+ "name":"活着",
+ "brand":"人民文学出版社",
+ "img":"26.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"2-3天",
+    "address":"A市B区C场",
+    "price":"24.5",
+    "post":"包邮"
+}
+}
+,
+{
+ "id":"25",
+ "type":"book",
+ "text":"书本",
+ "name":"边城",
+ "brand":"人民文学出版社",
+ "img":"27.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"2-3天",
+    "address":"A市B区C场",
+    "price":"22.5",
+    "post":"包邮"
+}
+}
+,
+{
+ "id":"26",
+ "type":"book",
+ "text":"书本",
+ "name":"复活",
+ "brand":"人民文学出版社",
+ "img":"28.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"2-3天",
+    "address":"A市B区C场",
+    "price":"15.75",
+    "post":"包邮"
+}
+}
+,
+{
+ "id":"27",
+ "type":"food",
+ "text":"食物",
+ "name":"218x2开口松子",
+ "brand":"三只松鼠",
+ "img":"29.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"2-4天",
+    "address":"A市B区C场",
+    "price":"49.9",
+    "post":"包邮"
+}
+}
+,
+{
+ "id":"28",
+ "type":"food",
+ "text":"食物",
+ "name":"森林大礼包",
+ "brand":"三只松鼠",
+ "img":"30.png",
+ "num":"1",
+ "detailinfo":{
+    "time":"2-4天",
+    "address":"A市B区C场",
+    "price":"88.8",
+    "post":"包邮"
+}
+}
+]

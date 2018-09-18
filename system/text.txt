@@ -1,0 +1,14 @@
+[
+{
+ "title":"首页",
+ "child":{"txt":{"title":"食品类","action":"/food"},"txt1":{"title":"电器类","action":"/elect"},"txt2":{"title":"服装类","action":"/cloth"},"txt3":{"title":"书本类","action":"/book"}}
+},
+{
+ "title":"管理",
+ "child":{"txt":{"title":"信息","action":"/stastic"},"txt1":{"title":"添加","action":"/add"},"txt2":{"title":"修改","action":"/correct"},"txt3":{"title":"删除","action":"/delet"}}
+},
+{
+ "title":"购物",
+ "child":{"txt":{"title":"购物车","action":"/shop"}}
+}
+]
