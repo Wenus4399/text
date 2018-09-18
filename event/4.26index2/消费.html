@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/消费.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/htmleaf-demo.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="js/jquery-3.0.0.js"></script>
+    <script src="js/消费.js"></script>
+    <style type="text/css">
+        *{margin:0;padding:0;list-style-type:none;}
+        a,img{border:0;}
+        /* flexslider */
+        .flexslider{position:relative;height:550px;overflow:hidden;background:url(img/轮播/loading.gif) 50% no-repeat;}
+        .slides{position:relative;z-index:1;}
+        .slides li{height:550px;width: 100%;}
+        .flex-control-nav{position:absolute;bottom:10px;z-index:2;width:100%;text-align:center;}
+        .flex-control-nav li{display:inline-block;width:14px;height:14px;margin:0 5px;*display:inline;zoom:1;}
+        .flex-control-nav a{display:inline-block;width:14px;height:14px;line-height:40px;overflow:hidden;background:url(img/轮播/dot.png) right 0 no-repeat;cursor:pointer;}
+        .flex-control-nav .flex-active{background-position:0 0;}
+
+        .flex-direction-nav{position:absolute;z-index:3;width:100%;top:45%;}
+        .flex-direction-nav li a{display:block;width:50px;height:50px;overflow:hidden;cursor:pointer;position:absolute;}
+        .flex-direction-nav li a.flex-prev{left:40px;background:url(img/轮播/prev.png) center center no-repeat;}
+        .flex-direction-nav li a.flex-next{right:40px;background:url(img/轮播/next.png) center center no-repeat;}
+    </style>
+
+    <title></title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="menul">
+        <div class="row">
+            <div class="col-lg-10 col-md-10 col-xm-10 col-sm-10" style="overflow: hidden;background-color:#ffffff">
+                <ul class="list-unstyled list-inline">
+                    <li class="menul_li menul_list"><img  class="img-responsive" src="img/1-2.png"></li>
+                    <li class="menul_li menul_list">    智能手机</li>
+                    <li class="menul_li menul_list">    笔记本&平板</li>
+                    <li class="menul_li menul_list">    穿戴设备</li>
+                    <li class="menul_li menul_list">    智能家居</li>
+                    <li class="menul_li menul_list">    更多产品 <img src="img/1-1.png"></li>
+                    <li class="menul_li menul_list">    软件应用</li>
+                    <li class="menul_li menul_list">    服务与支持</li>
+                    <li class="menul_li" style="color: #8a8a8a">    登录 &nbsp;| &nbsp;注册</li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-2 col-xm-2 col-sm-2" >
+               <div style="height: 64px;padding-top: 20px" class="text-center">
+                   <input class="menul_input" type="text" value="HAWEI P10">
+                   <img src="img/1-3.png" style="margin-left: -4px;margin-top: -4px">
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--下拉菜单-->
+<div class="list">
+    <div class="res"  >
+       <div class="row">
+           <div class="col-lg-9 col-sm-9 col-xs-9 col-md-9 draw" style="border-right: 1px silver solid">
+               <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 draw_li" style="border-right: 1px silver solid">
+                  <div class="text-center">
+                      <p style="font-size: large;color: white">HAWEI Mate &nbsp;<font style="font-size: x-small">系列</font></p>
+                      <p style="font-size: large;color: red">HAWEI Mate 9 </p>
+                      <img class="img-responsive" src="img/list/list1-1.png">
+                      <p style="color: white;font-size: smaller;margin-top: -10px;">进一步，再进一步</p>
+
+                      <div class="more">了解更多</div>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 draw_li" style="border-right: 1px silver solid">
+                   <div class="text-center">
+                       <p style="font-size: large;color: white">HAWEI P &nbsp;<font style="font-size: x-small">系列</font></p>
+                       <p style="font-size: large;color: red">HAWEI Mate P10 </p>
+                       <img class="img-responsive" src="img/list/list1-2.png">
+                       <p style="color: white;font-size: smaller;margin-top: -10px;">人像摄影大师</p>
+
+                       <div class="more">了解更多</div>
+                   </div>
+               </div>
+               <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 draw_li" style="border-right: 1px silver solid">
+                   <div class="text-center">
+                       <p style="font-size: large;color: white">HAWEI G &nbsp;<font style="font-size: x-small">系列</font></p>
+                       <p style="font-size: large;color: red">HAWEI Mate G9 青春版 </p>
+                       <img class="img-responsive" src="img/list/list1-3.png">
+                       <p style="color: white;font-size: smaller;margin-top: -10px;">溢于"颜"表</p>
+
+                       <div class="more">了解更多</div>
+                   </div></div>
+               <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 draw_li" >
+                   <div class="text-center">
+                       <p style="font-size: large;color: white">HAWEI 畅享 &nbsp;<font style="font-size: x-small">系列</font></p>
+                       <p style="font-size: large;color: red">HAWEI 畅享7 PLUS </p>
+                       <img class="img-responsive" src="img/list/list1-4.png">
+                       <p style="color: white;font-size: smaller;margin-top: -10px;">玩到爽 快到爽</p>
+
+                       <div class="more">了解更多</div>
+                   </div>
+               </div>
+
+               <div class="text-center ai">
+                查看全部智能手机
+               </div>
+           </div>
+           <div class="col-lg-3" >
+               <div class="flower">
+                <div class="all_font">
+                   <p class="flower_font">访问花粉俱乐部</p>
+                   <img src="img/animate/img_con_cn_favicon.ico">
+                   <p class="flower_font">关注我们</p>
+                   <img src="img/animate/QQ.png">
+                   <p class="flower_font">关注花粉俱乐部</p>
+                   <img src="img/animate/QQ.png">
+               </div>
+               </div>
+           </div>
+      </div>
+    </div>
+    <div class="res"   >
+        <div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 draw" >
+            <div class="col-lg-7 col-sm-7 col-xs-7 col-md-7 draw_li" style="border-right: 1px silver solid">
+             <div class="text-center">
+                 <p style="font-size: large;color: red">HAWEI MateBook </p>
+                 <img class="img-responsive center-block" src="img/list/list2-1.png">
+                 <p style="color: white;font-size: smaller;margin-top: -30px;">"本"该如此</p>
+                 <div class="more" style="margin-left: 200px">了解更多</div>
+             </div>
+            </div>
+            <div class="col-lg-5 col-sm-5 col-xs-5 col-md-5 draw_li" >
+                <div class="text-center">
+                    <p style="font-size: large;color: red">HAWEI 平板M3 </p>
+                    <img class="img-responsive center-block" src="img/list/list2-2.png">
+                    <p style="color: white;font-size: smaller;margin-top: -30px;">清晰世界，让声音鲜活起来</p>
+                    <div class="more" style="margin-left:130px">了解更多</div>
+                </div>
+            </div>
+            <div class="text-center ai"  style="margin-top: 340px" >
+                查看全部笔记本&平板
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 " >
+            <div class="flower">
+                <div class="all_font">
+                    <p class="flower_font">访问花粉俱乐部</p>
+                    <img src="img/animate/img_con_cn_favicon.ico">
+                    <p class="flower_font">关注我们</p>
+                    <img src="img/animate/QQ.png">
+                    <p class="flower_font">关注花粉俱乐部</p>
+                    <img src="img/animate/QQ.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="res"   >
+        <div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 draw" >
+            <div class="col-lg-7 col-sm-7 col-xs-7 col-md-7 draw_li" style="border-right: 1px silver solid">
+             <div class="text-center">
+                 <p style="font-size: large;color: red">HAWEI WATCH 2 </p>
+                 <img class="img-responsive center-block" src="img/list/list3-1.png">
+                 <p style="color: white;font-size: smaller;margin-top: -30px;">让运动更自由</p>
+                 <div class="more" style="margin-left: 200px">了解更多</div>
+             </div>
+            </div>
+            <div class="col-lg-5 col-sm-5 col-xs-5 col-md-5 draw_li" >
+                <div class="text-center">
+                    <p style="font-size: large;color: red">运动手环 B3 </p>
+                    <img class="img-responsive center-block" src="img/list/list2-2.png">
+                    <p style="color: white;font-size: smaller;margin-top: -30px;">腕上私语，动静随心</p>
+                    <div class="more" style="margin-left:130px">了解更多</div>
+                </div>
+            </div>
+            <div class="text-center ai"  style="margin-top: 340px" >
+                查看全部穿戴设备
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 " >
+            <div class="flower">
+                <div class="all_font">
+                    <p class="flower_font">访问花粉俱乐部</p>
+                    <img src="img/animate/img_con_cn_favicon.ico">
+                    <p class="flower_font">关注我们</p>
+                    <img src="img/animate/QQ.png">
+                    <p class="flower_font">关注花粉俱乐部</p>
+                    <img src="img/animate/QQ.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="res" >
+        <div class="col-sm-9 col-lg-9 col-xs-9 col-md-9 draw" style="border: 1px red solid">
+            <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 draw_li" >
+                <div class="text-center">
+                    <p style="font-size: large;color: red">华为路由Q1 </p>
+                    <img class="img-responsive center-block" src="img/list/list4-3.png">
+                    <p style="color: white;font-size: smaller;margin-top: -30px;">创新子母路由，信号覆盖无忧</p>
+                    <div class="more" style="margin-left:130px">了解更多</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 draw_li" >
+                <div class="text-center">
+                    <p style="font-size: large;color: red">华为无线电力猫 PT530 </p>
+                    <img class="img-responsive center-block" src="img/list/list4-2.png">
+                    <p style="color: white;font-size: smaller;margin-top: -30px;">电线变网线，轻松扩展WI-FI</p>
+                    <div class="more" style="margin-left:130px">了解更多</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 draw_li" >
+                <div class="text-center">
+                    <p style="font-size: large;color: red">华为盒子M330 </p>
+                    <img class="img-responsive center-block" src="img/list/list4-1.png">
+                    <p style="color: white;font-size: smaller;margin-top: -30px;">4k，硬解码 合法正版内容提供</p>
+                    <div class="more" style="margin-left:130px">了解更多</div>
+                </div>
+            </div>
+            <div class="text-center ai"  style="margin-top: 340px" >
+                查看全部穿戴设备
+            </div>
+        </div>
+        <div class="col-sm-3 col-lg-3 col-xs-3 col-md-3 " style="border: 1px red solid">
+            <div class="flower">
+                <div class="all_font">
+                    <p class="flower_font">访问花粉俱乐部</p>
+                    <img src="img/animate/img_con_cn_favicon.ico">
+                    <p class="flower_font">关注我们</p>
+                    <img src="img/animate/QQ.png">
+                    <p class="flower_font">关注花粉俱乐部</p>
+                    <img src="img/animate/QQ.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="res"   >
+        <div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 draw" >
+            <div class="col-lg-7 col-sm-7 col-xs-7 col-md-7 draw_li" style="border-right: 1px silver solid">
+                <div class="text-center">
+                    <p style="font-size: large;color: white">移动宽带</p>
+                    <p style="font-size: large;color: red">华为随行WIFI Plus </p>
+                    <img class="img-responsive center-block" src="img/list/list5-1.png">
+                    <p style="color: white;font-size: smaller;margin-top: -30px;">通达世界 从容致远</p>
+                    <div class="more" style="margin-left: 200px">了解更多</div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-5 col-xs-5 col-md-5 draw_li" >
+                <div class="text-center">
+                    <p style="font-size: large;color: white">配件</p>
+                    <p style="font-size: large;color: red">HAWEI VR</p>
+                    <img class="img-responsive center-block" src="img/list/list5-2.png">
+                    <p style="color: white;font-size: smaller;margin-top: -30px;">改变视界</p>
+                    <div class="more" style="margin-left:130px">了解更多</div>
+                </div>
+            </div>
+            <div class="text-center ai"  style="margin-top: 340px" >
+                查看全部配件
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 " >
+            <div class="flower">
+                <div class="all_font">
+                    <p class="flower_font">访问花粉俱乐部</p>
+                    <img src="img/animate/img_con_cn_favicon.ico">
+                    <p class="flower_font">关注我们</p>
+                    <img src="img/animate/QQ.png">
+                    <p class="flower_font">关注花粉俱乐部</p>
+                    <img src="img/animate/QQ.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="res"  >
+        <div class="row" >
+            <div class="col-lg-9 col-sm-9 col-xs-9 col-md-9 draw" style="border-right: 1px silver solid;height: 350px">
+                <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 draw_li" style="border-right: 1px silver solid">
+                    <div class="text-center" style="padding-top: 50px">
+
+                        <img class="img-responsive center-block" src="img/list/list6-1.png">
+                        <p style="color: white;font-size: smaller;margin-top: 20px;">EMUI产品</p>
+
+                        <div class="more">了解更多</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 draw_li" style="border-right: 1px silver solid">
+                    <div class="text-center"  style="padding-top: 50px">
+                       <img class="img-responsive center-block" src="img/list/list6-2.png">
+                        <p style="color: white;font-size: smaller;margin-top: 20px;">应用市场</p>
+
+                        <div class="more">了解更多</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 draw_li" style="border-right: 1px silver solid">
+                    <div class="text-center"  style="padding-top: 50px">
+                         <img class="img-responsive center-block" src="img/list/list6-3.png">
+                        <p style="color: white;font-size: smaller;margin-top: 20px;">云服务</p>
+
+                        <div class="more">了解更多</div>
+                    </div></div>
+                <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 draw_li" >
+                    <div class="text-center"  style="padding-top: 50px">
+                        <img class="img-responsive center-block" src="img/list/list6-1.png">
+                        <p style="color: white;font-size: smaller;margin-top: 20px;">PC软件</p>
+
+                        <div class="more">了解更多</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3"  >
+                <div class="flower" style="height: 350px">
+                    <div class="all_font">
+                        <p class="flower_font">访问花粉俱乐部</p>
+                        <img src="img/animate/img_con_cn_favicon.ico">
+                        <p class="flower_font">关注我们</p>
+                        <img src="img/animate/QQ.png">
+                        <p class="flower_font">关注花粉俱乐部</p>
+                        <img src="img/animate/QQ.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--轮播 用的插件-->
+<div class="flexslider">
+    <ul class="slides">
+        <li style="background:url(img/轮播/2-1.jpg)  no-repeat; background-size: 100%"></li>
+        <li style="background:url(img/轮播/2-2.jpg)   no-repeat; background-size: 100%"></li>
+        <li style="background:url(img/轮播/2-3.jpg)   no-repeat; background-size: 100%"></li>
+        <li style="background:url(img/轮播/2-4.jpg)   no-repeat; background-size: 100%"></li>
+        <li style="background:url(img/轮播/2-5.jpg)   no-repeat; background-size: 100%"></li>
+    </ul>
+</div>
+<!--轮播下边的小图片-->
+<div class="img">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 image">
+                <img src="img/img_1/3-2.jpg"></div>
+        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 image ">
+                <img src="img/img_1/3-3.jpg"></div>
+    </div>
+
+    <div class="row" style="margin-top: 1px">
+        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 image" >
+                <img src="img/img_1/3-4.jpg"></div>
+        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 image">
+            <img src="img/img_1/3-5.jpg"></div>
+
+    </div>
+</div>
+<!--灰色部分-->
+<div class="grily">
+    <div class="row">
+        <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
+            <div class="search_1">寻找华为</div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 50px">
+        <div class="col-lg-2 col-md-2 col-xs-2 col-sm-2"></div>
+        <div class="col-lg-9 col-md-9 col-xs-9 col-sm-9">
+            <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3 text-center" style="border-right: 1px silver solid" >
+                <p class="grily_font">478</p>
+                <p class="grily_font" style="font-size: small">体验店</p>
+            </div>
+            <div class="col-lg-5 col-md-5 col-xs-5 col-sm-5 text-center"   style="border-right: 1px silver solid">
+                <p class="grily_font">10000+</p>
+                <p class="grily_font" style="font-size: small">热销门店</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4 text-center" >
+                <p class="grily_font">896</p>
+                <p class="grily_font" style="font-size: small">用户服务中心</p>
+            </div>
+        </div>
+        <div class="col-lg-1 col-md-1 col-xs-1 col-sm-1"></div>
+    </div>
+    <!--三级菜单-->
+    <div class="row" style="margin-top: 50px">
+        <div class="col-lg-2 col-md-2 col-xs-2 col-sm-2"></div>
+        <div class="col-lg-9 col-md-9 col-xs-9 col-sm-9">
+            <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3 text-center" >
+               <select id="sel_s" onchange="changtext()">
+                   <option>选择省份</option>
+               </select>
+
+            </div>
+            <div class="col-lg-5 col-md-5 col-xs-5 col-sm-5 text-center" >
+                <select id="sel_c" onchange="changtext_qu()">
+                    <option>选择城市</option>
+                </select>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4 text-center" >
+                <select id="sel_q" >
+                    <option>可选项：选择区(县)</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-1 col-md-1 col-xs-1 col-sm-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12 col-ms-12 text-center grily_1">
+
+            <div class="font"><div style="border: 1px white solid;width: 100px;margin-left: 510px;margin-top: 20px;position: absolute">查找零售店</div>   <font style="position:absolute;margin-top: 20px"> 或</font>    <div style="border: 1px white solid;width: 120px;margin-left: 660px;margin-top: 20px; position: absolute">查找服务中心</div></div>
+           </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2 col-md-12 col-xs-12 col-sm-12 text-center">
+            <div style="border-bottom:1px red solid; color: white;width: 150px;margin-left: 540px;position: absolute;margin-top: 80px"> 联系我们</div>
+
+        </div>
+    </div>
+    <div class="row" style="margin-top: 100px">
+        <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4 background_1">
+            <img src="img/grily/4-1.png" style="position: absolute;margin-left: 100px">
+            <div class="hot"><font style="color: #e7e7e7;font-size: large">服务热线</font>
+              <div>400-830-8300 / 800-830-8300（座机）</div>
+                <div>普通话 7*24小时</div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4 background_1 erwei_1" >
+            <img  src="img/grily/4-2.png" style="position: absolute;margin-left: 100px">
+            <font style="color: #e7e7e7;font-size: large;margin-left: 170px;line-height: 56px">微信客服</font>
+
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4 background_1" >
+            <img src="img/grily/4-3.png" style="position: absolute;margin-left: 100px">
+            <font style="color: #e7e7e7;font-size: large;margin-left: 170px;line-height: 56px">在线客服</font>
+
+        </div>
+    </div>
+    <div class="erwei">
+        <img class="img-responsive" src="img/grily/二维码.png">
+    </div>
+
+</div>
+<!--动画组-->
+<div class="animate">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+      <div class="hid">
+          <ul class="animate_ul">
+              <li class="animate_li"><img   src="img/animate/1.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/2.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/6.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/7.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/8.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/9.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/10.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/11.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/12.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/13.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/18.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/36.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/38.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/39.jpg"></li>
+          </ul>
+          <ul class="animate_ul">
+              <li class="animate_li1">1</li>
+              <li class="animate_li1">2</li>
+              <li class="animate_li1">3</li>
+              <li class="animate_li1">4</li>
+              <li class="animate_li1">5</li>
+              <li class="animate_li1">6</li>
+              <li class="animate_li1">7</li>
+              <li class="animate_li1">8</li>
+              <li class="animate_li1">9</li>
+              <li class="animate_li1">10</li>
+              <li class="animate_li1">11</li>
+              <li class="animate_li1">12</li>
+              <li class="animate_li1">13</li>
+              <li class="animate_li1">14</li>
+          </ul>
+          <div class="animate_img"><img class="img-responsive" style="height: 135px" src="img/animate/优酷.png"></div>
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+      <div class="hid">
+          <ul class="animate_ul">
+              <li class="animate_li"><img   src="img/animate/18.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/23.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/30.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/26.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/27.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/28.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/29.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/31.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/33.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/34.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/35.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/36.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/38.jpg"></li>
+              <li class="animate_li"><img   src="img/animate/39.jpg"></li>
+          </ul>
+          <ul class="animate_ul">
+              <li class="animate_li1">1</li>
+              <li class="animate_li1">2</li>
+              <li class="animate_li1">3</li>
+              <li class="animate_li1">4</li>
+              <li class="animate_li1">5</li>
+              <li class="animate_li1">6</li>
+              <li class="animate_li1">7</li>
+              <li class="animate_li1">8</li>
+              <li class="animate_li1">9</li>
+              <li class="animate_li1">10</li>
+              <li class="animate_li1">11</li>
+              <li class="animate_li1">12</li>
+              <li class="animate_li1">13</li>
+              <li class="animate_li1">14</li>
+          </ul>
+          <div class="animate_img"><img class="img-responsive" style="height: 142px" src="img/animate/花粉.png"></div>
+      </div>
+    </div>
+    <div class="row ">
+        <div class="col-lg-8 " style="margin-top: 50px;padding-top:20px;padding-bottom: 40px;border-right: 1px rgba(160, 160, 160, 0.57) solid;background-color: rgba(0, 0, 0, 0.25)">
+                <ul style="float: left;margin-left: 70px">
+                    <li style="color:white;">购买产品</li><br>
+                    <li class="silver_li"> <a href="#">购买产品</a></li>
+                    <li class="silver_li"> <a href="#">智能手机</a></li>
+                    <li class="silver_li"> <a href="#">笔记本&平板</a></li>
+                    <li class="silver_li"> <a href="#">智能穿戴</a></li>
+                    <li class="silver_li"> <a href="#">智能家居</a></li>
+                    <li class="silver_li"> <a href="#">移动宽带</a></li>
+                    <li class="silver_li"> <a href="#">配件</a></li>
+                </ul>
+                <ul style="float: left;margin-left: 70px">
+                    <li style="color:white;">购物支持</li><br>
+
+                    <li class="silver_li"> <a href="#">购买指南</a></li>
+                    <li class="silver_li"> <a href="#">快捷支付</a></li>
+                    <li class="silver_li"> <a href="#">配送范围与费用</a></li>
+                    <li class="silver_li"> <a href="#">查询订单</a></li>
+                    <li class="silver_li"> <a href="#">实名认证</a></li>
+
+                </ul>
+                <ul style="float: left;margin-left: 70px">
+                    <li style="color:white;">服务与支持</li><br>
+                    <li class="silver_li"> <a href="#"></a></li>
+                    <li class="silver_li"> <a href="#">保修政策</a></li>
+                    <li class="silver_li"> <a href="#">退换货政策</a></li>
+                    <li class="silver_li"> <a href="#">物流查询</a></li>
+                    <li class="silver_li"> <a href="#">预约服务</a></li>
+                    <li class="silver_li"> <a href="#">寄修服务</a></li>
+                    <li class="silver_li"> <a href="#">手册与下载</a></li>
+                    <li class="silver_li"> <a href="#">预置应用公示</a></li>
+                    <li class="silver_li"> <a href="#">花粉俱乐部</a></li>
+                </ul>
+                <ul style="float: left;margin-left: 70px">
+                    <li style="color:white;">关于我们</li><br>
+                    <li class="silver_li"> <a href="#">关于我们</a></li>
+                    <li class="silver_li"> <a href="#">华为商城</a></li>
+                    <li class="silver_li"> <a href="#">企业业务</a></li>
+                    <li class="silver_li"> <a href="#">运营商网络</a></li>
+                    <li class="silver_li"> <a href="#">华为海洋</a></li>
+                    <li class="silver_li"> <a href="#">华为集团</a></li>
+                    <li class="silver_li"> <a href="#">加入我们</a></li>
+                </ul>
+                <ul style="float: left;margin-left: 70px">
+                    <li style="color:white;">新闻中心</li><br>
+                    <li class="silver_li"> <a href="#"></a></li>
+                    <li class="silver_li"> <a href="#">华为新闻</a></li>
+                    <li class="silver_li"> <a href="#">媒体报道</a></li>
+                    <li class="silver_li"> <a href="#">华为视频</a></li>
+
+                </ul>
+
+
+        </div>
+        <div class="col-lg-4" style="margin-top: 50px;padding-top:20px;padding-bottom: 85px;padding-left: 40px;background-color: rgba(0, 0, 0, 0.25)">
+            <div style="font-size: small;color:rgba(249, 249, 249, 0.76);">访问花粉俱乐部
+
+            <img class="img-responsive" style="width: 30px;height: 30px;margin-top: 20px;margin-left: 20px" src="img/animate/img_con_cn_favicon.ico">
+            </div>
+            <div style="font-size: small;color:rgba(249, 249, 249, 0.76);">关注我们
+
+                <img class="img-responsive" style="width: 100px;height: 50px;margin-top: 20px;margin-left: 20px" src="img/animate/QQ.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--最后一行-->
+<div class="end">
+    <div class="row">
+        <div class="col-lg-7">
+            <ul class="list-inline list-unstyled">
+                <li class="end_li"><a href="#">法律声明</a></li>
+                <li class="end_li"><a href="#">隐私策略</a></li>
+                <li class="end_li"><a href="#">网站地图</a></li>
+                <li class="end_li"><a href="#">联系我们</a></li>
+                <li class="end_li"><a href="#">版权申明</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-5">
+            <a class="end_li" >版权所有 © 华为技术有限公司 1998-2017。保留一切权利。 粤A2-20044005号</a>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.flexslider').flexslider({
+            directionNav: true,
+            pauseOnAction: false
+        });
+    });
+</script>
+<script>
+    var s_city=["安徽省","福建省","甘肃省","广东省" ,"河南省","陕西省"];
+    var c_city=[
+            ["安庆市","合肥市"],
+            ["南平市","三明市"],
+            ["酒泉市","兰州市"],
+            ["1","2"],
+            ["3","4"],
+            ["5","6"]
+    ];
+    var qu_city=[
+            [
+                    [],
+                    ["包河区","庐阳区"]
+            ],
+            [
+                    ["延平区"],
+                    ["延平区"]
+            ],
+            [
+                    [],
+                    ["城关区","七里河区"]
+            ],
+            [
+                    ["1-1","1-2"],
+                    ["2-1","2-2"]
+            ],
+            [
+                    ["3-4","3-3"],
+                    ["4-3","4-4"]
+            ],
+            [
+                    ["5-6","5-5"],
+                    ["6-5","6-6"]
+            ]
+    ];
+    var txt_s = document.getElementById("sel_s");
+    var txt_city = document.getElementById("sel_c");
+    var txt_qu = document.getElementById("sel_q");
+    /*实例化组*/
+    for (var i = 0; i < s_city.length; i++) {
+        var option = new Option(s_city[i], i);
+        txt_s.appendChild(option);
+    }
+    var qu;
+    function changtext() {
+        //清空
+        txt_city.options.length = 1;
+        //获取选择框的value值
+        var index = txt_s.value;
+        var city = c_city[index];
+        //在选择省的时候 先取一次区
+        qu = qu_city[index];
+        for (var i = 0; i < city.length; i++) {
+            var option = new Option(city[i], i);
+            txt_city.appendChild(option);
+        }
+    }
+    function changtext_qu() {
+        //清空
+        txt_qu.options.length = 1;
+        //获取选择框的value值
+        var index_s = txt_city.value;
+        var qu_txt = qu[index_s];
+        for (var i = 0; i < qu_txt.length; i++) {
+            var option = new Option(qu_txt[i], i);
+            txt_qu.appendChild(option);
+        }
+    }
+
+
+</script>
+
+</body>
+</html>
